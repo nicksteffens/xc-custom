@@ -10,7 +10,7 @@
   file: path=~/.zshenv state=touch
 
 - name: add shim to bash
-  lineinfile: dest=~/.bash_profile regexp="hub" line="eval \"$(hub alias -s)\"" state=present
+  lineinfile: dest=~/.bash_profile regexp="hub" line="eval \"$(/usr/local/bin/hub alias -s)\"" state=present
 
 - name: add shim to zsh
-  lineinfile: dest=~/.zshenv regexp="hub" line="eval \"$(hub alias -s)\"" state=present
+  lineinfile: dest=~/.zshenv regexp="hub" line="eval \"$(/usr/local/bin/hub alias -s)\"" state=present
