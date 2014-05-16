@@ -1,0 +1,5 @@
+---
+# install pow
+
+- name: install pow
+  shell: curl get.pow.cx | sh
