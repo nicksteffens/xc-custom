@@ -3,24 +3,22 @@
   roles:
 
   # osx config
-  # - role: dock
-  #   apps:
-  #   # - /Applications/Firefox.app
-  #   - /Applications/Airmail.app
-  #   - /Applications/Spotify.app
-  #   # - /Applications/Airmail.app
-  #   # - "/Applications/Adobe Photoshop CC/Adobe Photoshop CC.app"
-  #   # - "/Applications/Adobe Illustrator CC/Adobe Illustrator.app"
-  #   - /Applications/Atom.app
-  #   - /Applications/iTerm.app
-  #   - /Applications/Dash.app
-  #   folders:
-  #   - path: ~/
-  #   - path: ~/Documents
-  #   - path: ~/Downloads
-  #     sort: datemodified
-  # - role: dashboard
-  #   disabled: YES
+  - role: dock
+    apps:
+    - "/Applications/Utilities/Activity Monitor.app"
+    - /Applications/Skype.app
+    - /Applications/Adium.app
+    - /Applications/Safari.app
+    - /Applications/iTerm.app
+    - /Applications/Atom.app
+    - /Applications/Spotify.app
+    folders:
+    - path: ~/
+    - path: ~/Documents
+    - path: ~/Downloads
+      sort: datemodified
+  - role: dashboard
+    disabled: YES
 
   # fonts
   - role: cask_package
@@ -35,10 +33,12 @@
   - role: git
     git_user_name: Rafi Jacoby
     git_user_email: rjacoby@astrokid.com
+
   # Make sure the path prefix is there for the legit/hub shims
   - role: env_path
   - role: legit
   - role: hub
+
   - role: brew_package
     package_name: vim
   - role: brew_package
@@ -68,6 +68,16 @@
   - role: brew_package
     package_name: node
   - role: rbenv
+
+  # Ruby gems
+  - role: gem_package
+    package_name: bundler
+  - role: gem_package
+    package_name: rails
+  - role: gem_package
+    package_name: powder
+
+  # Node packages
   - role: npm_package
     package_name: grunt
   - role: npm_package
@@ -76,16 +86,28 @@
     package_name: yo
   - role: npm_package
     package_name: ember-cli
+  - role: npm_package
+    package_name: katon
+  - role: npm_package
+    package_name: harp
+  - role: npm_package
+    package_name: sails
+  - role: npm_package
+    package_name: geddy
+
+
 
   # - role: cask_package
   #   package_name: java
   # - role: brew_package
   #   package_name: android-sdk
+
   ## databases
   - role: brew_package
     package_name: postgres
   - role: brew_package
     package_name: mongodb
+
   ## deployment
   - role: brew_package
     package_name: heroku-toolbelt
@@ -105,8 +127,8 @@
   - role: cask_package
     package_name: skype
   - role: cask_package
+    package_name: adium
+  - role: cask_package
     package_name: vlc
   - role: cask_package
     package_name: iterm2
-  - role: cask_package
-    package_name: onepassword
