@@ -3,27 +3,24 @@
   roles:
 
   # osx config
-  - role: dock
-    apps:
-    - /Applications/Firefox.app
-    - /Applications/Airmail.app
-    - /Applications/Dashlane.app
-    - /Applications/Spotify.app
-    - /Applications/Airmail.app
-    - "/Applications/Adobe Photoshop CC/Adobe Photoshop CC.app"
-    - "/Applications/Adobe Illustrator CC/Adobe Illustrator.app"
-    - /Applications/Atom.app
-    - /Applications/iTerm.app
-    - /Applications/Dash.app
-    folders:
-    - path: ~/
-    - path: ~/Documents
-    - path: ~/Downloads
-      sort: datemodified
-  - role: cask_package
-    package_name: asepsis
-  - role: dashboard
-    disabled: YES
+  # - role: dock
+  #   apps:
+  #   # - /Applications/Firefox.app
+  #   - /Applications/Airmail.app
+  #   - /Applications/Spotify.app
+  #   # - /Applications/Airmail.app
+  #   # - "/Applications/Adobe Photoshop CC/Adobe Photoshop CC.app"
+  #   # - "/Applications/Adobe Illustrator CC/Adobe Illustrator.app"
+  #   - /Applications/Atom.app
+  #   - /Applications/iTerm.app
+  #   - /Applications/Dash.app
+  #   folders:
+  #   - path: ~/
+  #   - path: ~/Documents
+  #   - path: ~/Downloads
+  #     sort: datemodified
+  # - role: dashboard
+  #   disabled: YES
 
   # fonts
   - role: cask_package
@@ -42,6 +39,29 @@
   - role: hub
   - role: brew_package
     package_name: vim
+  - role: brew_package
+    package_name: ack
+  - role: brew_package
+    package_name: autossh
+  - role: brew_package
+    package_name: coreutils
+  - role: brew_package
+    package_name: findutils
+  - role: brew_package
+    package_name: imagemagick
+  - role: brew_package
+    package_name: pcre
+  - role: brew_package
+    package_name: sqlite
+  - role: brew_package
+    package_name: wget
+  - role: brew_package
+    package_name: docker
+  - role: brew_package
+    package_name: boot2docker
+  - role: pow
+
+
   ## languages
   - role: brew_package
     package_name: node
@@ -50,10 +70,15 @@
     package_name: grunt
   - role: npm_package
     package_name: bower
-  - role: cask_package
-    package_name: java
-  - role: brew_package
-    package_name: android-sdk
+  - role: npm_package
+    package_name: yo
+  - role: npm_package
+    package_name: ember-cli
+
+  # - role: cask_package
+  #   package_name: java
+  # - role: brew_package
+  #   package_name: android-sdk
   ## databases
   - role: brew_package
     package_name: postgres
@@ -69,3 +94,17 @@
   ## text editors
   - role: cask_package
     package_name: atom
+
+  # misc tools
+  - role: cask_package
+    package_name: skitch
+  - role: cask_package
+    package_name: dropbox
+  - role: cask_package
+    package_name: skype
+  - role: cask_package
+    package_name: vlc
+  - role: cask_package
+    package_name: iterm2
+  - role: cask_package
+    package_name: onepassword
