@@ -35,6 +35,8 @@
   - role: git
     git_user_name: Rafi Jacoby
     git_user_email: rjacoby@astrokid.com
+  # Make sure the path prefix is there for the legit/hub shims
+  - role: env_path
   - role: legit
   - role: hub
   - role: brew_package

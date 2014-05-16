@@ -1,0 +1,16 @@
+---
+# make sure /usr/local/bin is in shell for the shims that depend on it
+
+- name: ensure bash_profile presence
+  ignore_errors: True
+  file: path=~/.bash_profile state=touch
+
+- name: ensure zshenv presence
+  ignore_errors: True
+  file: path=~/.zshenv state=touch
+
+- name: add path to bash
+  lineinfile: dest=~/.bash_profile regexp="^export PATH" line="export PATH=\"$PATH:/usr/local/bin\"" state=present insertbefore=BOF
+
+- name: add path to zsh
+  lineinfile: dest=~/.zshenv regexp="^export PATH" line="export PATH=\"$PATH:/usr/local/bin\"" state=present insertbefore=BOF
