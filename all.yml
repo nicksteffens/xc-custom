@@ -3,22 +3,22 @@
   roles:
 
   # osx config
-  - role: dock
-    apps:
-    - "/Applications/Utilities/Activity Monitor.app"
-    - /Applications/Skype.app
-    - /Applications/Adium.app
-    - /Applications/Safari.app
-    - /Applications/iTerm.app
-    - /Applications/Atom.app
-    - /Applications/Spotify.app
-    folders:
-    - path: ~/
-    - path: ~/Documents
-    - path: ~/Downloads
-      sort: datemodified
-  - role: dashboard
-    disabled: YES
+  # - role: dock
+  #   apps:
+  #   - "/Applications/Utilities/Activity Monitor.app"
+  #   - /Applications/Skype.app
+  #   - /Applications/Adium.app
+  #   - /Applications/Safari.app
+  #   - /Applications/iTerm.app
+  #   - /Applications/Atom.app
+  #   - /Applications/Spotify.app
+  #   folders:
+  #   - path: ~/
+  #   - path: ~/Documents
+  #   - path: ~/Downloads
+  #     sort: datemodified
+  # - role: dashboard
+  #   disabled: YES
 
   # fonts
   - role: cask_package
@@ -31,8 +31,8 @@
   # cli
   # shell tooling
   - role: git
-    git_user_name: Rafi Jacoby
-    git_user_email: rjacoby@astrokid.com
+    git_user_name: Nick Steffens
+    git_user_email: nsteffens@gmail.com
 
   # Make sure the path prefix is there for the legit/hub shims
   - role: env_path
